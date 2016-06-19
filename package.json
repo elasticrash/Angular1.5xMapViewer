@@ -1,0 +1,14 @@
+{
+  "name": "angularleaflet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lite": "lite-server –port 10001",
+    "start": "start npm run lite && start karma start karma.conf.js --log-level debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^1.3.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "layers": [
+        {
+            "server": "http://192.168.150.34:8080/geoserver/",
+            "namespace": "rmx4",
+            "version": "version=1.1.0",
+            "layerName": "nhbc_coastal_buffer",
+            "layerAliasName": "Coastal Buffer",
+            "styles": "",
+            "format": "image/png",
+            "transparent": true,
+            "attribution": "dotted eyes",
+            "group": "category A"
+        },
+        {
+            "server": "http://192.168.150.34:8080/geoserver/",
+            "namespace": "rmx4",
+            "version": "version=1.1.0",
+            "layerName": "nhbc_wind_exposure",
+            "layerAliasName": "Wind Exposure",
+            "styles": "",
+            "format": "image/png",
+            "transparent": true,
+            "attribution": "dotted eyes",
+            "group": "category B"
+        }
+    ]
+}

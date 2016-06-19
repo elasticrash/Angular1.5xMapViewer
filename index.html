@@ -1,0 +1,46 @@
+<html ng-app="LeafletApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet Map</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="app/css/custom.css" rel="stylesheet">
+    <!-- 1. Load libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-component-router/angular_1_router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/proj4/dist/proj4-src.js"></script>
+    <script src="app/config/EPSG27700.js"></script>
+    <!-- 2. Load our 'modules' -->
+    <script src="app/app.component.js"></script>
+    <script src="app/promiseHelper.js"></script>
+    <script src="app/generalHelper.js"></script>
+    <script src="app/components/gis-interface.js"></script>
+    <script src="app/components/leaflet-component.js"></script>
+    <script src="app/components/sidebar-component.js"></script>
+    <script src="app/components/toolbar-component.js"></script>
+    <script src="app/components/layer-list-component.js"></script>
+    <!-- 3. Load our 'controllers' -->
+    <script src="app/controllers/printController.js"></script>
+    <!-- 4. Load our 'services' -->
+    <script src="app/directives/ui-leaflet.js"></script>
+    <script src="app/services/mapService.js"></script>
+
+</head>
+
+
+<!-- 5. Display the application -->
+
+<body style="overflow:hidden;" ng-cloak>
+    <gis-app></gis-app>
+</body>
+
+</html>

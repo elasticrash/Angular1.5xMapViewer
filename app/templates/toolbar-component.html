@@ -1,0 +1,35 @@
+<md-toolbar class="md-small" ng-show="!showSearch">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="model.showLegend()" hide-gt-md>
+            <md-icon md-font-set="md">menu</md-icon>
+        </md-button>
+        <div flex></div>
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="model.print()">
+            <md-icon md-font-set="md">print</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="model.goTo()">
+            <md-icon md-font-set="md">place</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="model.identify()">
+            <md-icon md-font-set="md">info</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="showSearch = !showSearch">
+            <md-icon md-font-set="md">search</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-toolbar class="md-small md-hue-1" ng-show="showSearch">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="showSearch = !showSearch" aria-label="Back">
+            <md-icon md-font-set="md">arrow_back</md-icon>
+        </md-button>
+        <md-input-container class="md-icon-float md-block" flex>
+            <input ng-model="model.search" placeholder="enter search">
+        </md-input-container>
+        <md-button class="md-icon-button" aria-label="Search" ng-click="showSearch = !showSearch">
+            <md-icon md-font-set="md">search</md-icon>
+        </md-button>
+    </div>
+
+</md-toolbar>
