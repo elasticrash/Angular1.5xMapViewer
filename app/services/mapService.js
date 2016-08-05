@@ -24,11 +24,11 @@ app.factory(
                     sld_body: layer.sld_body
                 };
 
-                if (layer.sld_body) {
+                if (!layer.sld_body) {
                     delete layerToBeAdded.sld_body;
                 }
                 if (layer.styles || layer.styles === "") {
-                    delete styles;
+                    delete layerToBeAdded.styles;
                 }
 
                 var leafLayer = L.tileLayer.wms(layer.server + "/wms?", layerToBeAdded);
