@@ -13,7 +13,7 @@ app.config(function ($mdIconProvider) {
 });
 
 app.component("gisApp", {
-    templateUrl: "/app/app.component.html",
+    templateUrl: "app/app.component.html",
     $routeConfig: [
         { path: "/gis", component: "gisInterface", name: "Gis", useAsDefault: true },
         { path: "/about", component: "about", name: "About" },
