@@ -1,0 +1,100 @@
+<md-dialog aria-label="Print options" ng-cloak>
+  <form name="userForm">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Print options</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-font-set="md">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content layout-padding>
+      <div layout-gt-xs="row">
+        <md-input-container flex>
+          <label>Title</label>
+          <input ng-model="print.Title">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Subtitle</label>
+          <input ng-model="print.Subtitle">
+        </md-input-container>
+      </div>
+      <div layout-gt-xs="row">
+        <md-input-container flex>
+          <label>Paper Size</label>
+          <md-select ng-model="print.PaperSize">
+            <md-option ng-repeat="ps in papersizes" value="{{ps}}">
+              {{ps}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Dpi</label>
+          <md-select ng-model="print.Dpi">
+            <md-option ng-repeat="dp in dpi" value="{{dp}}">
+              {{dp}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout-gt-xs="row">
+        <md-input-container flex>
+          <label>Orientation</label>
+          <md-select ng-model="print.Orientation">
+            <md-option ng-repeat="or in orientation" value="{{or}}">
+              {{or}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Filename</label>
+          <input ng-model="print.Filename">
+        </md-input-container>
+      </div>
+      <div layout-gt-xs="row">
+        <md-datepicker style="margin-top:18px" ng-model="print.Date" md-placeholder="Date" flex>
+        </md-datepicker>
+        <md-input-container flex>
+          <label>Choose Layer</label>
+          <md-select ng-model="selectedLayer">
+            <md-option ng-repeat="al in availableLayers" value="{{al.wmsParams.layers}}">
+              {{al.wmsParams.layers}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout-gt-xs="row">
+        <md-input-container flex>
+          <md-switch style="margin-top:9px" ng-model="print.Legend" aria-label="Legend Area">
+            <p>Legend Area</p>
+          </md-switch>
+        </md-input-container>
+        <md-input-container ng-if="print.Legend" flex>
+          <label>Legend Position</label>
+          <md-select ng-model="print.LegendPosition">
+            <md-option ng-repeat="lp in legendPosition" value="{{lp}}">
+              {{lp}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout-gt-xs="row">
+        <md-input-container ng-if="print.Legend" flex>
+          <label>Legend Text</label>
+          <textarea ng-model="print.LegendText">
+          </textarea>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button class="md-raised md-primary" ng-click="answer('PRINT')">
+        PRINT
+      </md-button>
+      <md-button class="md-raised md-warn" ng-click="answer('CANCEL')" style="margin-right:20px;">
+        CANCEL
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

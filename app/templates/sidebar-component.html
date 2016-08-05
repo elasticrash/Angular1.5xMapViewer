@@ -1,0 +1,29 @@
+<md-sidenav style="overflow:hidden;" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-indigo">
+        <h2 class="md-toolbar-tools">Layers</h2>
+    </md-toolbar>
+    <md-content layout-fill>
+        <div ng-repeat="group in model.layerGroups track by $index">
+            <md-list>
+                <md-list-item>
+                    <md-button class="md-primary" ng-click="showThings = !showThings" layout="row" layout-wrap>
+                        <md-icon md-font-set="md">layers</md-icon>
+                        {{group.name}}
+                        <span style="width:150px"></span>
+                        <md-icon ng-if="showThings" md-font-set="md">keyboard_arrow_up</md-icon>
+                        <md-icon ng-if="!showThings" md-font-set="md">keyboard_arrow_down</md-icon>
+                    </md-button><span flex></span>
+                </md-list-item>
+                <md-list-item ng-show="showThings">
+                    <div ng-repeat="layer in model.layers track by $index">
+                        <div ng-if="group.name == layer.group">
+                            <p class="md-body-1"> {{ layer.layerAliasName }} </p>
+                            <md-checkbox ng-show="showThings" aria-label=layer.layerAliasName class="md-secondary" ng-model="model.showLayerIndex[$index]
+                        " ng-click="model.showHideLayer($index) "></md-checkbox>
+                        </div>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+    </md-content>
+</md-sidenav>

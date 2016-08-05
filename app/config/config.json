@@ -1,0 +1,28 @@
+{
+    "layers": [
+        {
+            "server": "http://78.46.70.93:8080/geoserver/",
+            "namespace": "cnt",
+            "version": "version=1.1.0",
+            "layerName": "osnames",
+            "layerAliasName": "OS Gazetteer data",
+            "styles": "",
+            "format": "image/png",
+            "transparent": true,
+            "attribution": "Ordinance Survey | elasticrash",
+            "group": "category A"
+        },
+        {
+            "server": "http://78.46.70.93:8080/geoserver/",
+            "namespace": "cnt",
+            "version": "version=1.1.0",
+            "layerName": "post_codes",
+            "layerAliasName": "OS postcodes",
+            "styles": "",
+            "format": "image/png",
+            "transparent": true,
+            "attribution": "Ordinance Survey | elasticrash",
+            "group": "category B"
+        }
+    ]
+}

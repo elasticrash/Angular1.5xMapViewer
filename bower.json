@@ -1,0 +1,34 @@
+{
+  "name": "mylocalarea",
+  "version": "0.0.1",
+  "authors": [
+    "Jon Britton"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.5",
+    "angular-route": "~1.5.5",
+    "angular-sanitize": "~1.5.5",
+    "angular-animate": "~1.5.5",
+    "angular-mocks": "~1.5.5",
+    "angular-aria": "~1.5.5",
+    "angular-component-router": "~0.2.0",
+    "angular-messages": "~1.5.5",
+    "angular-material-data-table": "~0.10.9",
+    "angular-material": "~1.0.8",
+    "angular-simple-logger": "0.1.7",
+    "angular-translate": "2.11.0",
+    "leaflet": "0.7.7",
+    "proj4": "~2.3.14",
+    "jasmine-core": "2.4.1",
+    "karma": "0.4.6"
+  }
+}
