@@ -1,19 +1,19 @@
 function readLayersFromConfigFile($http) {
-    return $http.get("http://localhost:3000/app/config/config.json")
+    return $http.get("app/config/config.json")
         .then(function (response) {
             return response.data;
         });
 }
 
 function readPaperSizesFromConfigFile($http) {
-    return $http.get("http://localhost:3000/app/config/paperSize.json")
+    return $http.get("app/config/paperSize.json")
         .then(function (response) {
             return response.data;
         });
 }
 
 function readSLDXmlTemplate($http) {
-    return $http.get("http://localhost:3000/app/config/polygon.sld.xml")
+    return $http.get("app/config/polygon.sld.xml")
         .then(function (response) {
             return response.data;
         });
