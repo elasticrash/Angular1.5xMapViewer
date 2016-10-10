@@ -42,3 +42,7 @@ md-list-item .ng-hide {
 leaf-element{
     width:100%;
 }
+
+.leaflet-pane {
+    z-index: 0 !important;
+}
