@@ -6,7 +6,7 @@ app.component("leafElement", {
         model.layers = [];
         model.$onInit = function () {
             leafletData.getMap().then(function (map) {
-                mapService.setView([51.505, -0.09], 13, map);
++               mapService.setView([55.945, -3.195], 15, map);
                 mapService.addTileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', map);
             });
             readLayersFromConfigFile($http).then(function (layers) {
