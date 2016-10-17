@@ -1,6 +1,6 @@
 # AngularGISclient
 
-A basic map viewer using Leaflet and AngularJS
+A basic map viewer using Leaflet and AngularJS 1.5x
 
 
 ## Installation
